@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <!-- CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+<!-- jQuery and JS bundle w/ Popper.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container" >
+    <h2 class="head center p-4 mb-5" style="background-color: midnightblue;color: white;text-align: center"> BLOGS </h2>
+ <div class="text-center">
+    <a href="{% url 'createpost-url' %}" class="btn btn-primary"> Add post</a>
+ </div>
+
+
+
+{% for post in posts %}
+    <div class="jumbotron">
+    <div  class="card mt-3" >
+            <h2 class="card - head p-4 m-2">{{ post.title }}</h2>
+
+  <img src="{{ post.images.url }}" alt="NO Image Available">
+
+        <p class="card - body m-2 p-3"> {{ post.description  }}</p>
+            <small class="card - footer p-2 mb-3 m-2" style="font-size:1rem"> By {{ post.author }}</small>
+             <small class="ml-2 mb-2"> posted ago {{ post.date_posted | timesince }}</small>
+    </div>
+
+</div>
+{% endfor %}
+
+</div>
+
+
+
+
+<div>
+  <h3 class="head center p-4 mb-5" style="background-color: midnightblue;color: white;text-align: center"> THANK YOU </h3>
+</div>
+</body>
+</html>

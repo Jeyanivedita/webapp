@@ -1,0 +1,6 @@
+asgiref==3.3.1
+Django==3.1.4
+-e git://github.com/maraujop/django-crispy-forms.git@71a5058f04ca693dc155eecc556a0c0248042885#egg=django_crispy_forms
+gunicorn==20.0.4
+pytz==2020.4
+sqlparse==0.4.1
