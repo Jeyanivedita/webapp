@@ -1,12 +1,6 @@
 asgiref==3.3.1
 Django==3.1.4
-django-crispy-forms==1.10.0
-npyscreen==4.10.5
-Pillow==8.0.1
-plyer==1.4.3
-pypiwin32==223
+-e git://github.com/maraujop/django-crispy-forms.git@71a5058f04ca693dc155eecc556a0c0248042885#egg=django_crispy_forms
+gunicorn==20.0.4
 pytz==2020.4
-pywin32==228
 sqlparse==0.4.1
-win10toast==0.9
-window==0.0.3
