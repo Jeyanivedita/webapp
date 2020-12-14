@@ -28,8 +28,4 @@ def createPost(request):
     data = {
         'form': form
     }
-<<<<<<< HEAD
     return render(request, template_name='blog/createPost.html', context=data)
-=======
-    return render(request, template_name='blog/createPost.html', context=data)
->>>>>>> d9a48e455d2e97535714dd5a0d5e18a452cd9bce
