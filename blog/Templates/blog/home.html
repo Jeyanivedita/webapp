@@ -21,16 +21,17 @@
 
 
 {% for post in posts %}
+
     <div class="jumbotron">
     <div  class="card mt-3" >
             <h2 class="card - head p-4 m-2">{{ post.title }}</h2>
-
-  <img src="{{ post.images.url }}" alt="NO Image Available">
-
         <p class="card - body m-2 p-3"> {{ post.description  }}</p>
+         </div>
+         <img src="{{ post.images.url }}" alt="NO Image Available">
+          <div  class="card mt-3" >
             <small class="card - footer p-2 mb-3 m-2" style="font-size:1rem"> By {{ post.author }}</small>
              <small class="ml-2 mb-2"> posted ago {{ post.date_posted | timesince }}</small>
-    </div>
+            </div>
 
 </div>
 {% endfor %}
